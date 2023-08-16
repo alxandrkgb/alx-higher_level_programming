@@ -1,6 +1,8 @@
-let printedArgs = 0;
+#!/usr/bin/node
 
-exports.logMe = function (item) {
-  console.log(`${printedArgs}: ${item}`);
-  printedArgs++;
+let counter = 0;
+
+exports.logMe = function count (item) {
+  console.log(`${counter}: ${item}`);
+  counter += 1;
 };
