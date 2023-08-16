@@ -1,16 +1,26 @@
-class Rectangle {
-  constructor(w, h) {
-    if (w <= 0 || h <= 0) {
-      return {}; // Create an empty object if w or h is not a positive integer
-    }
+#!/usr/bin/node
 
-    this.width = w;
-    this.height = h;
+// Prints a Rectangle with the parameters passed
+
+class Rectangle {
+  constructor (width, height) {
+    if (typeof width === 'number' && typeof height === 'number' && width > 0 && height > 0) {
+      this.width = width;
+      this.height = height;
+    }
   }
 
-  print() {
-    for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+  print () {
+    for (let i = 0; i < this.height; ++i) {
+      let j = 0;
+
+      for (; j < this.width; ++j) {
+        process.stdout.write('X');
+      }
+
+      if (j === this.width) {
+        console.log('');
+      }
     }
   }
 }
