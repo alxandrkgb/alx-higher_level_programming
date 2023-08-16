@@ -1,3 +1,5 @@
+#!/usr/bin/node
+  
 const data = require('./101-data');
 
 const occurrencesById = data.dict;
