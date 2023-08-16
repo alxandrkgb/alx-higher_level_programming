@@ -2,9 +2,9 @@
 // Defines a rectangle class with width and hight attributes.
 
 class Rectangle {
-  constructor(w, h) {
-    this.width = w;
-    this.height = h;
+  constructor (width, height) {
+    this.width = width;
+    this.height = height;
   }
 }
 
