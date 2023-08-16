@@ -1,12 +1,12 @@
+#!/usr/bin/node
+// checks for Rectangle parameters
+
 class Rectangle {
-  constructor(w, h) {
-    if (w <= 0 || h <= 0) {
-      // Create an empty object if w or h is not a positive integer
-      return {};
+  constructor (width, height) {
+    if (typeof width === 'number' && typeof height === 'number' && width > 0 && height > 0) {
+      this.width = width;
+      this.height = height;
     }
-    
-    this.width = w;
-    this.height = h;
   }
 }
 
