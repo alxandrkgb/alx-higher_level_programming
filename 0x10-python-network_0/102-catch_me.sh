@@ -1,4 +1,3 @@
 #!/bin/bash
-
-# Use curl to send a PUT request to the specific URL and set the user-agent header to "I am from Holberton"
-curl -s -X PUT -H "User-Agent: I am from Holberton" -d "user_id=98" 0.0.0.0:5000/catch_me
+# PUT METHOD is allowed, we must follow redirections, we should come from HolbertonSchool and our userid should be user_id = 98
+curl -sLX PUT -H "origin: HolbertonSchool" -d "user_id=98" 0.0.0.0:5000/catch_me
