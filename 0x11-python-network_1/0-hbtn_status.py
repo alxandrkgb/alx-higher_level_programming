@@ -1,17 +1,15 @@
 #!/usr/bin/python3
+"""Fetch
+https://intranet.hbtn.io/status
+using urlib package
+"""
+
 import urllib.request
 
-url = "https://alx-intranet.hbtn.io/status"
-
-try:
-    with urllib.request.urlopen(url) as response:
-        content = response.read()
-        utf8_content = content.decode('utf-8')
-
+if __name__ == '__main__':
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as request:
+        response = request.read()
         print("Body response:")
-        print("    - type: {}".format(type(content)))
-        print("    - content: {}".format(content))
-        print("    - utf8 content: {}".format(utf8_content))
-
-except Exception as e:
-    print("Error: {}".format(e))
+        print("\t- type: {}".format(type(response)))
+        print("\t- content: {}".format(response))
+        print("\t- utf8 content: {}".format(response.decode('UTF-8')))
